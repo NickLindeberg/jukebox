@@ -2,8 +2,9 @@ require 'rails_helper'
 
 describe 'song index' do
   it 'user can see all songs' do
-    song_1 = Song.create!(title: 'Superfreak', length: 300, play_count: 5000000)
-    song_2 = Song.create!(title: 'Ice Ice Baby', length: 200, play_count: 10000)
+    artist = Artist.create(name: "Jimbob")
+    song_1 = Song.create!(title: 'Superfreak', length: 300, play_count: 5000000, artist_id: artist.id)
+    song_2 = Song.create!(title: 'Ice Ice Baby', length: 200, play_count: 10000, artist_id: artist.id)
 
     visit '/songs'
 

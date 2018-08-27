@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   # get '/songs', to: 'songs#index'
   root 'songs#index'
   resources :songs, only: [:index]
-
+  resources :artists, only: [:new, :create, :index]
+  resources :playlists, only: [:new]
 end
