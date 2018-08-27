@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
-  <head>
+  <header>
     <title>Jukebox</title>
-    <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', media: 'all' %>
-    <%= javascript_include_tag 'application' %>
   </head>
 
   <body>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+
     <%= yield %>
   </body>
 </html>
