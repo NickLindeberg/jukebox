@@ -6,7 +6,7 @@ describe 'song index' do
     song_1 = Song.create!(title: 'Superfreak', length: 300, play_count: 5000000, artist_id: artist.id)
     song_2 = Song.create!(title: 'Ice Ice Baby', length: 200, play_count: 10000, artist_id: artist.id)
 
-    visit '/songs'
+    visit songs_path
 
     expect(page).to have_content(song_1.title)
     expect(page).to have_content("Play Count: #{song_1.play_count}")
